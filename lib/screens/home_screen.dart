@@ -1,8 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
-import '../widgets/cardfeed.dart';
+import '../widgets/listcardsfeed.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -20,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         ),),
         backgroundColor: Color.fromARGB(77, 255, 119, 182),
       ),
-      body: CardFeed(),
+      body: ListCarsFeed(),
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
     );
   }

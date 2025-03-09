@@ -8,7 +8,10 @@ import 'package:hello_flutter/widgets/imagecard.dart';
 class CardFeed extends StatelessWidget {
   const CardFeed({
     super.key,
+    required this.card
   });
+
+  final Map<String, String> card;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +27,10 @@ class CardFeed extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.all(10),
-                child: TitleCard(),
+                child: TitleCard(name: card["name"]!,),
               ),
-              DescriptionCard(),
+              DescriptionCard(description: card["description"]!
+                ,),
               ImageCard(),
               ButtonsCard()
             ],

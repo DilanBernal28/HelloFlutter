@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'likebutton.dart';
+
 
 class ButtonsCard extends StatelessWidget {
   const ButtonsCard({
@@ -12,26 +14,14 @@ class ButtonsCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          LikeButton(),
           TextButton(onPressed: (){}, child: Row(
             children: [
               CircleAvatar(
-                child: const Text("🤘"),
-                backgroundColor: Color.fromARGB(255, 152, 79, 50),
-              ),
-              const Text("Me rockea", style: TextStyle (
-                  backgroundColor: Color.fromARGB(255, 152, 79, 50),
-                  color: Colors.white70,
-                  height: 2
-              ),)
-            ],
-          )),
-          TextButton(onPressed: (){}, child: Row(
-            children: [
-              CircleAvatar(
-                child: const Text("😒"),
                 backgroundColor: Color.fromARGB(255, 73, 22, 0),
+                child: const Text("😒"),
               ),SizedBox(width: 10),
-              const Text("Que posser")
+              const Text("Que poser")
             ],
           ))
         ],
@@ -39,3 +29,5 @@ class ButtonsCard extends StatelessWidget {
     );
   }
 }
+
+
